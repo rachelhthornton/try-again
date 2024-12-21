@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div id="qr-overlay">
+        <div class="qr-content">
+            <h1>Need a Tutor?</h1>
+            <h3>You found our QR code! Welcome to our site!</h3>
+            <button id="qr-close" onclick="redirectToAbout()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToAbout() {
+            window.location.href = "about.html";
+        }
+    </script>
+</body>
+
+</html>

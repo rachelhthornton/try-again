@@ -1,0 +1,211 @@
+/* ===================================================================
+   General body and layout styling
+=================================================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===================================================================
+   Header Styling
+=================================================================== */
+
+header {
+    background-color: #d9f1e2; /* Light greenish background */
+    padding: 15px 0;
+    border-bottom: 4px solid #ddd; /* Light grey border */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Distribute menu items evenly */
+    margin: 0;
+    padding: 0;
+}
+
+.highlight-container {
+    text-align: center; /* Center-align the child elements */
+}
+
+.highlight-box {
+    background-color: #d9f1e2; /* Slightly darker green */
+    border-radius: 20px; /* Rounded corners */
+    display: inline-block; /* Make the box shrink-wrap to its content */
+    padding: 4px 8px; /* Minimal padding: 4px on top/bottom, 8px on left/right */
+    margin-top: 8px; /* Slight spacing above the box */
+    position: relative; /* Ensure positioning context for absolute child */
+    overflow: visible;  /* Ensure icon is not clipped */
+}
+
+.question-icon {
+    position: absolute;
+    left: -3px; /* Adjust based on your icon size */
+    top: 50%;
+    transform: translateY(-100%); /* Center the icon vertically relative to the box */
+    width: 45px; /* Set icon width */
+    height: 45px; /* Set icon height */
+    z-index: 1; /* Ensure the icon overlaps correctly */
+}
+
+#qr-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(217, 241, 226, 0.8), transparent), 
+        url('../images/chalk.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire background */
+}
+
+
+.qr-content {
+    background-color: #d9f1e2; /* Match your site theme */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+}
+
+#qr-close {
+    background-color: #a7c8b4; /* Slightly darker background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#qr-close:hover {
+    background-color: #b3d3b0; /* Darker on hover */
+}
+
+
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px; /* Space between menu items */
+}
+
+/* ===================================================================
+   Menu Item Styling
+=================================================================== */
+
+nav a.menu-item {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+    font-weight: bold; /* Make text bold */
+    padding: 10px 40px; /* Add padding for boxy look */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #a7c8b4;
+    background-color: #e3f5ea; /* Light background for menu items */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* On hover, slightly darken the background */
+nav a.menu-item:hover {
+    background-color: #a7c8b4; /* Slightly darker on hover */
+}
+
+/* Active/current page styling (for manual use) */
+nav a.menu-item.active {
+    background-color: #a7c8b4; /* Darker background for active page */
+    color: black; /* Keep the text color black when active */
+}
+
+/* Remove blue color from non-active links */
+nav a.menu-item:link,
+nav a.menu-item:visited {
+    color: black; /* Ensure black color for both visited and unvisited links */
+}
+
+/* ===================================================================
+   Section Styling
+=================================================================== */
+
+section p {
+    max-width: 900px;
+    margin: 0 auto 15px; /* Adds spacing between paragraphs */
+    text-indent: 30px;   /* Automatically indents the text */
+}
+
+/* Remove indentation for specific paragraphs */
+.no-indent {
+    text-indent: 0;
+}
+
+/* Centered content */
+.centered {
+    text-align: center;
+    margin: 0 auto;  /* Optional: centers it horizontally if it's a block element */
+}
+
+/* ===================================================================
+   Header Text Styling
+=================================================================== */
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-weight: lighter;  /* Makes the text less bold */
+    font-size: 1.5rem;    /* Reduces the size of the text */
+}
+
+/* ===================================================================
+   Section Box Styling (for boxed sections with background)
+=================================================================== */
+
+.section-box {
+    background-color: #f0fff0; /* Light greenish background */
+    border-radius: 50px; /* Rounded corners */
+    padding: 15px 0px; /* Reduced padding to make the box hug the text */
+    margin-bottom: 20px;
+    border: 3px solid #e6f4e1; /* Optional border for more contrast */
+}
+
+/* Mobile Styles */
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center;    
+    }
+
+    nav ul li {
+        margin-bottom: 0px; 
+        width: 70%;         
+    }
+
+    nav a.menu-item {
+        display: block;          
+        padding: 15px;           
+        text-align: center;      
+        margin: 5px 0;           
+        border: 0px solid #e6f4e1; 
+    }
+}
+
+@media (max-width: 768px) {
+    .question-icon {
+        left: 0px;  /* Adjust the left position for mobile */
+        top: 20%;  /* Adjust the top position for mobile */
+        width: 35px;  /* Optionally resize the icon */
+        height: 35px;  /* Optionally resize the icon */
+    }
+}
+
+

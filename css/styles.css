@@ -28,6 +28,20 @@ header nav ul {
     padding: 0;
 }
 
+
+@media (min-width: 768px) {
+    .aligned-list {
+        list-style-position: inside; /* Makes the bullet point align with text */
+        margin-left: 30px; /* Adjust this to match your paragraph's left margin */
+        padding-left: 0;   /* Remove extra padding if necessary */
+    }
+
+    .aligned-list li {
+        margin-bottom: 5px; /* Optional: space between list items */
+    }
+}
+
+
 .highlight-container {
     text-align: center; /* Center-align the child elements */
 }
